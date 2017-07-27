@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="MyApp2">
+  <head>
+    <meta charset="utf-8">
+    <title>Daniel's Page</title>
+  </head>
+  <body ng-controller="Main as clr">
+    Field1: <input type="text" id="field1" value="Hello World!"><br>
+Field2: <input type="text" id="field2"><br><br>
+
+<button onclick="myFunction()">Copy Text</button>
+<button onclick="myFunction">Click Me </button>
+<script>
+function myFunction() {
+    document.getElementById("field2").value = document.getElementById("field1").value;
+}
+</script>
+
+<p id="time"><p>
+<div id="jumbotron">This is the time:</div>
+    <h1>{{clr.message}}  {{clr.message2}}</h1>
+
+
+    <ul ng-repeat="post in clr.posts">
+      <li>{{post.id}} monkey(s) jumping on the bed. {{post.id}} fell down and broke his head. Mommy called the doctor and the doctor said. No more jumping on the bed. </li>
+    </ul>
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
+  </body>
+</html>
